@@ -26,15 +26,20 @@ const routes: Routes = [
   {
     path: 'ordenar',
     component: OrdenarComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot([
-
-    ])
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ]
 })
-export class AppRouterModule { }
+export class AppRouterModule {}
